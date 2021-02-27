@@ -4,5 +4,5 @@
 
 * just do it   
 cd ~/.vim/pack/mypackage/start/  
-git clone <Github Repository URL>
+git clone [Github Repository URL]
 
