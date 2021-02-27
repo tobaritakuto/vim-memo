@@ -9,7 +9,7 @@ colorscheme iceberg
 "colorscheme gruvbox
 
 " ----- Key Mapping -----
-nnoremap <c-q> :q!<cr> " don't availabe Vim 8.1
+nnoremap <c-q> :q!<cr> " don't availabe on Vim 8.1
 nnoremap <c-l> gt
 nnoremap <c-h> gT
 

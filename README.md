@@ -3,6 +3,6 @@
 ## plugin management
 
 * just do it   
-cd ~/.vim/pack/mypackage/start/
+cd ~/.vim/pack/mypackage/start/  
 git clone <Github Repository URL>
 
