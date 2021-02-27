@@ -2,9 +2,7 @@
 
 ## plugin management
 
-* simple method   
-'cd ~/.vim/pack/mypackage/start/'
-
-## Netrw useful commands
-
+* just do it   
+cd ~/.vim/pack/mypackage/start/
+git clone <Github Repository URL>
 
