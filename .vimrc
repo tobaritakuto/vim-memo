@@ -1,22 +1,24 @@
 syntax enable
 filetype plugin on
 
+set encoding=utf-8
 set number 
 set cursorline
-set background=dark
 
 colorscheme iceberg
 "colorscheme gruvbox
+set background=dark
 
-" ----- Key Mapping -----
+" ----- General Key Mapping -----
+inoremap jk <ESC>
 nnoremap <c-q> :q!<cr> " don't availabe on Vim 8.1
 nnoremap <c-l> gt
 nnoremap <c-h> gT
 
-"----- NerdTree -----
+"----- Nerd Tree -----
 nnoremap <c-t> :NERDTreeToggle<CR>
 
-"----- Vim-Airline-----
+"----- Vim Airline-----
 let g:airline_theme = 'iceberg'
 "let g:airline_theme = 'gruvbox'
 let g:airline#extensions#tabline#enabled = 1
