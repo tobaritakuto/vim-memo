@@ -22,8 +22,7 @@ set termwinsize=7x0
 " Nerd Tree
 nnoremap <c-t> :NERDTreeTabsToggle<CR>
 let NERDTreeWinSize=23
-"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-au VimEnter NERD_tree_1 enew | execute 'NERDTree '.argv()[0] | let g:nerdtree_tabs_open_on_console_startup=1
+autocmd VimEnter NERD_tree_1 enew | execute 'NERDTree '.argv()[0] | let g:nerdtree_tabs_open_on_console_startup=1
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
