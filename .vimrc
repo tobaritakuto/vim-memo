@@ -1,3 +1,4 @@
+" Base Settings
 syntax enable
 filetype plugin on
 
@@ -5,29 +6,36 @@ set encoding=utf-8
 set number 
 set cursorline
 
-colorscheme iceberg
-"colorscheme gruvbox
+" Colorscheme
+colorscheme iceberg "iceberg, gruvbox
 set background=dark
 
-" ----- General Key Mapping -----
+" General Mappings
 inoremap jk <ESC>
 nnoremap <c-q> :q!<cr> " don't availabe on Vim 8.1
 nnoremap <c-l> gt
 nnoremap <c-h> gT
 
-"----- Nerd Tree -----
-nnoremap <c-t> :NERDTreeToggle<CR>
+" Terminal
+set splitbelow
+set termwinsize=7x0
 
-"----- Vim Airline-----
-let g:airline_theme = 'iceberg'
-"let g:airline_theme = 'gruvbox'
+" Nerd Tree
+nnoremap <c-t> :NERDTreeTabsToggle<CR>
+let NERDTreeWinSize=23
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+au VimEnter NERD_tree_1 enew | execute 'NERDTree '.argv()[0] | let g:nerdtree_tabs_open_on_console_startup=1
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+"Vim Airline
+let g:airline_theme = 'iceberg' "iceverg, gruvbox
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 0
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#show_close_button = 0 " remove close buttom
 let g:airline#extensions#tabline#tabs_label = ''
-" let g:airline#extensions#tabline#tabs_label = '%{strftime("%m/%d %H:%M")}' " display clock
 let g:airline#extensions#tabline#show_tab_count = 0    " dont show tab numbers 
 let g:airline#extensions#tabline#show_buffers = 0      " dont show buffers
 let g:airline#extensions#wordcount#enabled = 0
